@@ -75,7 +75,7 @@ public class SimilarityIndex: Identifiable, Hashable {
     }
 
     /// An enumeration of available embedding models.
-    public enum EmbeddingModelType {
+    public enum EmbeddingModelType: CaseIterable {
         /// DistilBERT, a small version of BERT model fine tuned for questing-answering.
         case distilbert
 
@@ -89,13 +89,13 @@ public class SimilarityIndex: Identifiable, Hashable {
         case native
     }
 
-    public enum SimilarityMetricType {
+    public enum SimilarityMetricType: CaseIterable {
         case dotproduct
         case cosine
         case euclidian
     }
 
-    public enum TextSplitterType {
+    public enum TextSplitterType: CaseIterable {
         case token
         case character
         case recursive
